@@ -1,0 +1,87 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Login = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local ImageLabel = Instance.new("ImageLabel")
+local Title = Instance.new("TextLabel")
+local Title_2 = Instance.new("TextLabel")
+local TextBox = Instance.new("TextBox")
+local UICorner_2 = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+
+--Properties:
+
+Login.Name = "Login"
+Login.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Login.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = Login
+Frame.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+Frame.Position = UDim2.new(0.560237765, 0, 0.224539936, 0)
+Frame.Size = UDim2.new(0, 303, 0, 359)
+
+UICorner.Parent = Frame
+
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.Position = UDim2.new(-0.151444077, 0, -0.0957161188, 0)
+ImageLabel.Size = UDim2.new(0, 100, 0, 89)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=333602063"
+
+Title.Name = "Title"
+Title.Parent = Frame
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Position = UDim2.new(0.218806148, 0, -0.00205022097, 0)
+Title.Size = UDim2.new(0, 170, 0, 44)
+Title.ZIndex = 1231234
+Title.Font = Enum.Font.Gotham
+Title.Text = "WatchWare V2"
+Title.TextColor3 = Color3.fromRGB(198, 198, 198)
+Title.TextSize = 25.000
+Title.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+
+Title_2.Name = "Title"
+Title_2.Parent = Frame
+Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.BackgroundTransparency = 1.000
+Title_2.Position = UDim2.new(0.255109638, 0, 0.119810998, 0)
+Title_2.Size = UDim2.new(0, 148, 0, 30)
+Title_2.ZIndex = 1231234
+Title_2.Font = Enum.Font.Gotham
+Title_2.Text = "LOGIN"
+Title_2.TextColor3 = Color3.fromRGB(198, 198, 198)
+Title_2.TextSize = 15.000
+Title_2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.fromRGB(168, 168, 168)
+TextBox.Position = UDim2.new(0.168316826, 0, 0.284122586, 0)
+TextBox.Size = UDim2.new(0, 200, 0, 50)
+TextBox.Font = Enum.Font.Sarpanch
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.TextSize = 20.000
+TextButton.MouseButton1Down:Connect(function()
+	if TextBox.Text == "christmasletsgowatchware" then
+		main.Visible = false
+		
+		loadstring(game:HttpGet("https://github.com/garfieldscripter/watchware/blob/main/watchware%20working%20on"))()
+	end
+end)
+
+UICorner_2.Parent = TextBox
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.Position = UDim2.new(0.218805999, 0, 0.635011733, 0)
+TextButton.Size = UDim2.new(0, 176, 0, 42)
+TextButton.Font = Enum.Font.GothamSemibold
+TextButton.Text = "LOG IN"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 25.000
